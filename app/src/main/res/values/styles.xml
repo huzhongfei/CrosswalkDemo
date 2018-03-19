@@ -1,0 +1,43 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- 常用的字体类型：
+   1、typeface：serif：宋体 sans: 黑体 normal: 常规 monospace: 等宽
+   2、textStyle：bold：粗体 italic： 斜体 normal: 常规
+-->
+    <!-- S= 标题栏文字样式 -->
+    <!-- 头部左边文字样式 -->
+    <style name="HeadTextLeftStyle">
+        <item name="android:textSize">@dimen/common_header_leftrighttextsize</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:typeface">normal</item>
+        <item name="android:textColor">@color/text_gray1</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+
+    <!-- 头部中间文字样式 -->
+    <style name="HeadTextMiddleStyle">
+        <item name="android:textSize">@dimen/common_header_midtextsize</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:typeface">normal</item>
+        <item name="android:textColor">@color/text_gray1</item>
+    </style>
+
+    <!-- 头部右边文字样式 -->
+    <style name="HeadTextRightStyle">
+        <item name="android:textSize">@dimen/common_header_leftrighttextsize</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:typeface">normal</item>
+        <item name="android:textColor">@color/text_gray1</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+    <!-- E= 标题栏文字样式 -->
+
+</resources>

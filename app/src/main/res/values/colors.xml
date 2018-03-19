@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!-- S= text color -->
+    <color name="text_blue">#3BC9F4</color>
+    <color name="text_yellow">#FFC028</color>
+    <color name="text_yellow1">#f4b318</color>
+    <color name="text_remaid">#FF6000</color>
+    <color name="text_gray1">#333333</color>
+    <color name="text_gray2">#666666</color>
+    <color name="text_gray3">#999999</color>
+    <color name="text_gray4">#CCCCCC</color>
+    <color name="text_gray5">#adadad</color>
+    <color name="text_gray6">#b1b1b1</color>
+    <color name="text_gray7">#c1c1c1</color>
+    <color name="text_gray8">#5c5c5c</color>
+    <color name="text_gray9">#d8d8d8</color>
+    <color name="text_gray10">#d6d6d6</color>
+    <color name="text_gray11">#4f4f4f</color>
+    <color name="text_gray12">#9ca0a2</color>
+    <color name="text_button">#555555</color>
+    <color name="text_explain">#B1B1B1</color>
+    <!-- E= text color -->
+
+    <!-- S= 常规色 -->
+    <color name="red">#ff0000</color>
+    <color name="green">#22B14C</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="lightgray">#d3d3d3</color>
+    <color name="darkgray">#a9a9a9</color>
+    <color name="dimgray">#696969</color>
+    <color name="gray">#808080</color>
+    <color name="gray1">#f7f7f7</color>
+    <color name="gray2">#f6f6f6</color>
+    <color name="gray3">#cccccc</color>
+    <color name="gray4">#f5f5f5</color>
+    <color name="gray5">#f1f2f4</color>
+    <color name="gray6">#dddddd</color>
+    <color name="gray7">#f6f6f6</color>
+    <color name="gray8">#20f1f2f4</color>
+    <color name="gray9">#ababab</color>
+    <color name="blue">#ff3b7bd2</color>
+    <color name="blue1">#23B0E9</color>
+    <color name="pink">#FFC0CB</color>
+    <color name="orange">#F6705E</color>
+    <color name="transparent">#00000000</color>
+    <color name="translucent">#e0000000</color>
+    <color name="ripple_color">#9ccc</color>
+    <color name="audio_pro_color">#4D55D2F8</color>
+    <!-- E= 常规色 -->
+
+</resources>

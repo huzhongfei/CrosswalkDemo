@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="选择webview策略："
+        android:textSize="16sp"
+        android:textColor="@android:color/holo_blue_dark"
+        android:layout_marginTop="15dp"
+        android:paddingLeft="15dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="原生表示采用android系统自带的webview加载H5游戏；CROSSWALk表示采用CROSSWALK内核中定义的webview加载H5游戏；腾讯TBS表示采用腾讯TBS内核定义的webview加载H5游戏；默认采用原生"
+        android:textSize="12sp"
+        android:textColor="@android:color/darker_gray"
+        android:layout_marginBottom="15dp"
+        android:paddingLeft="15dp"
+        />
+
+    <RadioGroup
+        android:id="@+id/webview_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <RadioButton
+            android:id="@+id/native_wb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="原生"
+            android:checked="true"
+            android:layout_weight="1"
+            />
+
+        <RadioButton
+            android:id="@+id/cw_wb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CROSSWALK"
+            android:layout_weight="1"
+            />
+
+        <RadioButton
+            android:id="@+id/tbs_wb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="腾讯TBS"
+            android:layout_weight="1"
+            />
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="选择要测试的H5游戏（默认选择超级玛丽）："
+        android:textSize="16sp"
+        android:textColor="@android:color/holo_blue_dark"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:paddingLeft="15dp"
+        />
+
+    <include layout="@layout/common_h5game_group" />
+
+    <Button
+        android:id="@+id/confirm_bn"
+        android:layout_width="88dp"
+        android:layout_height="30dp"
+        android:text="前往"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        android:background="@android:color/holo_blue_dark"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        />
+
+</LinearLayout>
