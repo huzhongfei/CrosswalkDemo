@@ -24,7 +24,7 @@ import org.xwalk.core.XWalkWebResourceRequest;
 import org.xwalk.core.XWalkWebResourceResponse;
 
 /**
- *
+ * 封装crosswalk下集成webview的一些功能
  * 集成Crosswalk的服务类
  * @author sanji
  */
@@ -215,7 +215,6 @@ public class CrosswalkService {
             mWebView.onShow();
         }
     }
-
 
     public void onPause() {
         if (mWebView != null) {
