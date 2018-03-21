@@ -166,6 +166,11 @@ public class SystemService {
 
         /**
          * 加载错误的时候会回调，在其中可做错误处理，比如再请求加载一次，或者提示404的错误页面
+         * 加载本地错误界面的步骤：
+         * 1、写一个html文件（error_handle.html），用于出错时展示给用户看的提示页面
+         * 2、将该html文件放置到代码根目录的assets文件夹下
+         * 3、复写WebViewClient的onRecievedError方法
+         * 4、该方法传回了错误码，根据错误类型可以进行不同的错误分类处理
          * @param view 当前的WebView实例
          * @param request 本次加载对应的request对象
          * @param error 错误描述
