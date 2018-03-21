@@ -2,6 +2,7 @@ package com.woobo.crosswalkdemo.view.activity.common;
 
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.RadioGroup;
 
@@ -10,13 +11,14 @@ import com.woobo.crosswalkdemo.common.config.H5GameUrlConfig;
 import com.woobo.crosswalkdemo.view.activity.crosswalk.CrossWebviewActivity;
 import com.woobo.crosswalkdemo.view.activity.system.SysWebviewActivity;
 import com.woobo.crosswalkdemo.view.activity.tbs.TbsWebviewActivity;
+import com.woobo.crosswalkdemo.view.dialog.TestSelectPop;
 
 /**
  * @author sanji
  * 程序主界面（也是入口界面）
  */
 public class MainActivity extends BaseActivity implements
-        RadioGroup.OnCheckedChangeListener, View.OnClickListener {
+        RadioGroup.OnCheckedChangeListener, View.OnClickListener, HeadUIHelper.EvenObserver {
 
     // 表示原生webview
     private static final int WB_NATIVE = 0;
@@ -34,19 +36,31 @@ public class MainActivity extends BaseActivity implements
     private RadioGroup game_group;
     private Button confirm_bn;
 
+    private HeadUIHelper headUIHelper;
+    private TestSelectPop testSelectPop;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        initViewObject();
+        initView();
         register();
     }
 
-    private void initViewObject() {
+    private void initView() {
         webview_group = findViewById(R.id.webview_group);
         game_group = findViewById(R.id.game_group);
         confirm_bn = findViewById(R.id.confirm_bn);
+        initHeadView();
+    }
+
+    private void initHeadView() {
+        headUIHelper = new HeadUIHelper();
+        headUIHelper.initHead(getWindow().getDecorView(), this);
+        headUIHelper.setLeftImageVisible(View.INVISIBLE);
+        headUIHelper.setMiddleText("WebView测试");
+        headUIHelper.setRightImage(R.mipmap.more);
     }
 
     private void register() {
@@ -130,5 +144,16 @@ public class MainActivity extends BaseActivity implements
                 switchWebview();
                 break;
         }
+    }
+
+    // ------- 实现HeadUIHelper.EvenObserver ----------------------------------
+
+    @Override
+    public void onClickLeft(ViewGroup head) {}
+
+    @Override
+    public void onClicRight(ViewGroup head) {
+        testSelectPop = new TestSelectPop(this);
+        testSelectPop.showPopupWindow(head);
     }
 }

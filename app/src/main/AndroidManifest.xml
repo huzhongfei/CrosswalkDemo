@@ -34,7 +34,9 @@
         </activity>
         <activity android:name=".view.activity.crosswalk.CrossWebviewActivity" />
         <activity android:name=".view.activity.system.SysWebviewActivity" />
-        <activity android:name=".view.activity.tbs.TbsWebviewActivity"></activity>
+        <activity android:name=".view.activity.tbs.TbsWebviewActivity"/>
+        <activity android:name=".view.activity.tests.JsByLoadActivity" />
+        <activity android:name=".view.activity.tests.EvaluateJsActivity" />
     </application>
 
 </manifest>

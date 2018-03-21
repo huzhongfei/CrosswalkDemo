@@ -6,6 +6,9 @@
     android:orientation="vertical"
     >
 
+    <!-- 标题栏布局 -->
+    <include layout="@layout/common_head"/>"
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -88,6 +88,11 @@ public class HeadUIHelper implements View.OnClickListener {
         leftText.setText(leftTextStr);
     }
 
+    public void setLeftImageVisible(int visible) {
+        if (null == leftImage) return;
+        leftImage.setVisibility(visible);
+    }
+
     public void setMiddleText(String middleTextStr) {
         if (null == middleText) return;
         middleText.setVisibility(View.VISIBLE);
