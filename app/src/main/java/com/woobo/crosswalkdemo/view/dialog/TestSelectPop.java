@@ -13,8 +13,8 @@ import android.widget.PopupWindow;
 import com.woobo.crosswalkdemo.R;
 import com.woobo.crosswalkdemo.common.app.AppManager;
 import com.woobo.crosswalkdemo.common.app.MyApplication;
-import com.woobo.crosswalkdemo.view.activity.tests.EvaluateJsActivity;
-import com.woobo.crosswalkdemo.view.activity.tests.JsByLoadActivity;
+import com.woobo.crosswalkdemo.view.activity.tests.AWSTestActivity;
+import com.woobo.crosswalkdemo.view.activity.tests.JsAndNativeActivity;
 import com.woobo.crosswalkdemo.view.adapter.TestSelectAdapter;
 
 /**
@@ -22,7 +22,7 @@ import com.woobo.crosswalkdemo.view.adapter.TestSelectAdapter;
  */
 public class TestSelectPop extends PopupWindow implements TestSelectAdapter.OnItemClickListener {
 
-    private static final String[] testItems = {"JS by load", "evaluateJavascript"};
+    private static final String[] testItems = {"JS And Native", "AWS TEST"};
     private final View view;
     private RecyclerView recyclerview;
     private TestSelectAdapter testSelectAdapter;
@@ -92,10 +92,10 @@ public class TestSelectPop extends PopupWindow implements TestSelectAdapter.OnIt
     public void onItemClick(int position) {
         switch (position) {
             case 0:
-                JsByLoadActivity.start(AppManager.getInstance().currentActivity());
+                JsAndNativeActivity.start(AppManager.getInstance().currentActivity());
                 break;
             case 1:
-                EvaluateJsActivity.start(AppManager.getInstance().currentActivity());
+                AWSTestActivity.start(AppManager.getInstance().currentActivity());
                 break;
         }
     }

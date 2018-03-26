@@ -15,7 +15,7 @@ import com.woobo.crosswalkdemo.common.utils.ToastUtil;
  * Created by sanji on 2018/3/21.
  */
 public abstract class CommonHeadActivity extends BaseActivity
-        implements HeadUIHelper.EvenObserver {
+        implements HeadUIHelper.EvenObserver, View.OnClickListener {
 
     private HeadUIHelper headUIHelper;
     private FrameLayout contentContainer;
@@ -58,6 +58,13 @@ public abstract class CommonHeadActivity extends BaseActivity
 
     @Override
     public void onClicRight(ViewGroup head) {
+
+    }
+
+    // -------- 实现View.OnClickListener------------------------------------
+
+    @Override
+    public void onClick(View v) {
 
     }
 

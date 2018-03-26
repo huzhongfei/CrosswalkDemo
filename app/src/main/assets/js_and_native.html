@@ -1,0 +1,58 @@
+<!DOCTYPE>
+<html>
+
+    <head>
+        <meta charset="utf-8"/>
+        <title>js test</title>
+
+        <script type="text/javascript">
+            function callJS() {
+                alert("Android 调用了JS的callJS方法");
+                console.log("Android 调用了JS的callJS方法");
+            }
+
+            function evaluateCallJs() {
+                // alert("Android 调用了JS的evaluateCallJs方法");
+                console.log("Android 调用了JS的evaluateCallJs方法");
+            }
+
+            function callAndroidHello() {
+                // 由于对象映射，所以调用test对象等于调用Android映射的对象
+                test.hello("来自JS-callAndroidHello的问候");
+            }
+
+            // 通过url的拦截来调用android的函数
+            function callAndroidByUrl() {
+                // 约定的url协议为：js://webview?arg1=111&arg2=222
+                // 当该JS通过Android的mWebView.loadUrl("...")
+                // 加载后，就会回调shouldOverrideUrlLoading （）
+                document.location = "js://webview?arg1=111&arg2=222";
+            }
+
+            function callAndroidByUrl1() {
+                document.location = "js://webview1?arg1=333&arg2=444";
+            }
+
+            function callAndroidByUrl1Back(result) {
+                console.log("callAndroidByUrlBack result: " + result);
+            }
+
+            function callAndroidByPrompt() {
+                var result = prompt("js://prompt?arg1=555&arg2=666");
+                alert("callAndroidByPrompt result: " + result);
+            }
+
+        </script>
+
+    </head>
+
+    <body>
+        <h3>Android通过loadurl调用JS的函数callJS</h3>
+        <button onclick="callJS()">点击我</button>
+        <button onclick="callAndroidHello()">点我测试android的hello函数</button> </br></br>
+        <button onclick="callAndroidByUrl()">点击我测试通过url拦截调用android函数</button> </br></br>
+        <button onclick="callAndroidByUrl1()">点击我也是测试通过url拦截调用android函数</button> </br></br>
+        <button onclick="callAndroidByPrompt()">点击我测试拦截prompt实现调用android函数</button>
+    </body>
+
+</html>

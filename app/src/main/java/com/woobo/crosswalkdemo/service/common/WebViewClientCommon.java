@@ -19,7 +19,7 @@ import android.webkit.WebViewClient;
  * 注：在项目中还是得自己定义一个client的子类，不建议直接使用该类，它只作参考使用
  * Created by sanji
  */
-public class WebviewClientCommon extends WebViewClient {
+public class WebViewClientCommon extends WebViewClient {
 
     /**
      * 由于每次超链接在加载前都会先走shouldOverrideUrlLoading回调，所以我们如果想拦截某个URL，

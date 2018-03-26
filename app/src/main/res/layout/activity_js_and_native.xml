@@ -6,6 +6,20 @@
     android:orientation="vertical"
     >
 
+    <Button
+        android:id="@+id/loadJS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="loadJS"
+        />
+
+    <Button
+        android:id="@+id/evaluateJavas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="evaluateJavas"
+        />
+
     <LinearLayout
         android:id="@+id/webview_lay"
         android:layout_width="match_parent"
