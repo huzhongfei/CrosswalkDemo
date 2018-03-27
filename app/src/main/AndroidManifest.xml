@@ -58,6 +58,9 @@
         <activity android:name=".view.activity.tests.H5GameX5WbActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
             />
+        <activity android:name=".view.activity.tests.X5BrowserActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            />
     </application>
 
 </manifest>

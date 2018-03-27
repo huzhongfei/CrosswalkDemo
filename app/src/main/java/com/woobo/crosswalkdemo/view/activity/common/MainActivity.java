@@ -9,7 +9,6 @@ import android.widget.TextView;
 
 import com.woobo.crosswalkdemo.R;
 import com.woobo.crosswalkdemo.common.config.H5GameUrlConfig;
-import com.woobo.crosswalkdemo.view.activity.crosswalk.CrossWebviewActivity;
 import com.woobo.crosswalkdemo.view.activity.system.SysWebviewActivity;
 import com.woobo.crosswalkdemo.view.activity.tbs.TbsWebviewActivity;
 import com.woobo.crosswalkdemo.view.dialog.TestSelectPop;
@@ -102,7 +101,7 @@ public class MainActivity extends BaseActivity implements
      * 进入crosswalk webview测试界面
      */
     public void goCrosswalkWebview() {
-        CrossWebviewActivity.start(this);
+        //CrossWebviewActivity.start(this);
     }
 
     /**
