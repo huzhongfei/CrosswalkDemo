@@ -97,6 +97,11 @@ public class SysWebviewActivity extends H5Activity implements SystemService.Even
     }
 
     @Override
+    public void onClickMiddle(ViewGroup head) {
+
+    }
+
+    @Override
     public void onClicRight(ViewGroup head) {
         if (null != h5GameSelectPop) h5GameSelectPop.showPopupWindow(head);
     }

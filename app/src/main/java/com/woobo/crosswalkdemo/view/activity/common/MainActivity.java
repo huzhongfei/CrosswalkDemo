@@ -152,6 +152,12 @@ public class MainActivity extends BaseActivity implements
     public void onClickLeft(ViewGroup head) {}
 
     @Override
+    public void onClickMiddle(ViewGroup head) {
+        // 为了解决woobo上看不到有上角的图标，点击中间的标题也可以弹出更多菜单
+        onClicRight(head);
+    }
+
+    @Override
     public void onClicRight(ViewGroup head) {
         testSelectPop = new TestSelectPop(this);
         testSelectPop.showPopupWindow(head);

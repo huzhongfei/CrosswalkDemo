@@ -120,6 +120,10 @@ public class HeadUIHelper implements View.OnClickListener {
                 if (null != evenObserver)
                 evenObserver.onClickLeft(headGlobalLayout);
                 break;
+            case R.id.headMiddleView: // 点击中间控件
+                if (null != evenObserver)
+                    evenObserver.onClickMiddle(headGlobalLayout);
+                break;
             case R.id.headRightView: // 点击右侧控件
                 if (null != evenObserver)
                 evenObserver.onClicRight(headGlobalLayout);
@@ -129,6 +133,8 @@ public class HeadUIHelper implements View.OnClickListener {
 
     public interface EvenObserver {
         void onClickLeft(ViewGroup head);
+        void onClickMiddle(ViewGroup head);
         void onClicRight(ViewGroup head);
     }
+
 }

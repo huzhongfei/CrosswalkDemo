@@ -57,6 +57,11 @@ public abstract class CommonHeadActivity extends BaseActivity
     }
 
     @Override
+    public void onClickMiddle(ViewGroup head) {
+
+    }
+
+    @Override
     public void onClicRight(ViewGroup head) {
 
     }
