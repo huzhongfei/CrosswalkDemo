@@ -10,9 +10,10 @@ import com.woobo.crosswalkdemo.common.app.MyApplication;
 import com.woobo.crosswalkdemo.common.utils.ToastUtil;
 
 /**
+ * 方便项目管理，在实际开发中只需要维护一个CommonHeadActivity
  * Created by sanji on 2018/3/21.
  */
-public abstract class CommonHeadActivity extends BaseActivity
+public abstract class CommonHeadCrosswalkActivity extends BaseCrosswalkActivity
         implements HeadUIHelper.EvenObserver, View.OnClickListener {
 
     private HeadUIHelper headUIHelper;

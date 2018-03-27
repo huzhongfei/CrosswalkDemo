@@ -8,9 +8,9 @@ import com.woobo.crosswalkdemo.common.utils.LogUtils;
 import org.xwalk.core.XWalkActivity;
 
 /**
+ * 方便项目管理，在实际开发中可以自定义一个XWalkActivity，让它继承一个自己的BaseActivity
  * Created by sanji on 2018/3/15.
  */
-
 public abstract class BaseCrosswalkActivity extends XWalkActivity {
 
     public final String TAG = getClass().getSimpleName();
@@ -21,6 +21,14 @@ public abstract class BaseCrosswalkActivity extends XWalkActivity {
         // 将该Activity加入集合中以便管理
         AppManager.getInstance().addActivity(this);
         LogUtils.d(TAG, "onCreate");
+    }
+
+    /**
+     * 在onCreate中调用
+     */
+    @Override
+    protected void onXWalkReady() {
+        LogUtils.d(TAG, "onXWalkReady");
     }
 
     @Override

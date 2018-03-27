@@ -111,6 +111,22 @@ public class HeadUIHelper implements View.OnClickListener {
         rightImage.setImageResource(resId);
     }
 
+    public void clickLeftView() {
+        if (null != evenObserver)
+            evenObserver.onClickLeft(headGlobalLayout);
+    }
+
+    public void clickMiddleView() {
+        if (null != evenObserver)
+            evenObserver.onClickMiddle(headGlobalLayout);
+    }
+
+    public void clickRightView() {
+        if (null != evenObserver)
+            evenObserver.onClicRight(headGlobalLayout);
+    }
+
+
     // --------- 实现View.OnClickListener -------------------------------------
 
     @Override

@@ -17,6 +17,7 @@ import android.widget.LinearLayout;
 import com.woobo.crosswalkdemo.R;
 import com.woobo.crosswalkdemo.common.app.MyApplication;
 import com.woobo.crosswalkdemo.view.activity.common.CommonHeadActivity;
+import com.woobo.crosswalkdemo.view.activity.common.CommonHeadCrosswalkActivity;
 
 import org.xwalk.core.XWalkResourceClient;
 import org.xwalk.core.XWalkSettings;
@@ -27,7 +28,7 @@ import org.xwalk.core.XWalkView;
  * 加载本地H5游戏界面 crosswalk引擎
  * Created by sanji on 2018/3/27.
  */
-public class H5GameForCrosswalkActivity extends CommonHeadActivity {
+public class H5GameForCrosswalkActivity extends CommonHeadCrosswalkActivity {
 
     private LinearLayout mWebViewLay;
     private XWalkView mWebView;
@@ -55,9 +56,14 @@ public class H5GameForCrosswalkActivity extends CommonHeadActivity {
         initView();
     }
 
+    @Override
+    protected void onXWalkReady() {
+        super.onXWalkReady();
+        initWebView();
+    }
+
     private void initView() {
         mWebViewLay = findViewById(R.id.webview_lay);
-        initWebView();
     }
 
     private void initWebView() {

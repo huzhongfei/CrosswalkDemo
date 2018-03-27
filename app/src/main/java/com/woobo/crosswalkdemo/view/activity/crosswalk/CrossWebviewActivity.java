@@ -10,16 +10,15 @@ import android.widget.LinearLayout;
 import com.woobo.crosswalkdemo.R;
 import com.woobo.crosswalkdemo.common.utils.ToastUtil;
 import com.woobo.crosswalkdemo.service.crosswalk.CrosswalkService;
+import com.woobo.crosswalkdemo.view.activity.common.BaseCrosswalkActivity;
 import com.woobo.crosswalkdemo.view.activity.common.HeadUIHelper;
 import com.woobo.crosswalkdemo.view.dialog.H5GameSelectPop;
-
-import org.xwalk.core.XWalkActivity;
 
 /**
  * @author sanji
  * 显示Crosswalk webview的界面
  */
-public class CrossWebviewActivity extends XWalkActivity implements
+public class CrossWebviewActivity extends BaseCrosswalkActivity implements
         HeadUIHelper.EvenObserver, H5GameSelectPop.EventObserver  {
 
     private CrosswalkService crosswalkService;

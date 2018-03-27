@@ -5,6 +5,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 
 import com.woobo.crosswalkdemo.R;
 import com.woobo.crosswalkdemo.common.config.H5GameUrlConfig;
@@ -39,6 +40,9 @@ public class MainActivity extends BaseActivity implements
     private HeadUIHelper headUIHelper;
     private TestSelectPop testSelectPop;
 
+    // 为了避免woobo看不到角落的情况，在界面上设计一个更多入口
+    private TextView more_view;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,6 +56,7 @@ public class MainActivity extends BaseActivity implements
         webview_group = findViewById(R.id.webview_group);
         game_group = findViewById(R.id.game_group);
         confirm_bn = findViewById(R.id.confirm_bn);
+        more_view = findViewById(R.id.more_view);
         initHeadView();
     }
 
@@ -66,6 +71,7 @@ public class MainActivity extends BaseActivity implements
     private void register() {
         webview_group.setOnCheckedChangeListener(this);
         game_group.setOnCheckedChangeListener(this);
+        more_view.setOnClickListener(this);
         confirm_bn.setOnClickListener(this);
     }
 
@@ -142,6 +148,9 @@ public class MainActivity extends BaseActivity implements
         switch (v.getId()) {
             case R.id.confirm_bn: // 确认选择，并进入webview界面
                 switchWebview();
+                break;
+            case R.id.more_view: // 点击界面中的更多
+                if (null != headUIHelper) headUIHelper.clickRightView();
                 break;
         }
     }
