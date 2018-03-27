@@ -25,20 +25,39 @@
         android:hardwareAccelerated="true"
         android:name=".common.app.MyApplication"
         >
-        <activity android:name=".view.activity.common.MainActivity">
+        <activity android:name=".view.activity.common.MainActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.activity.crosswalk.CrossWebviewActivity" />
-        <activity android:name=".view.activity.system.SysWebviewActivity" />
-        <activity android:name=".view.activity.tbs.TbsWebviewActivity"/>
-        <activity android:name=".view.activity.tests.JsAndNativeActivity" />
-        <activity android:name=".view.activity.tests.AWSTestActivity"/>
-        <activity android:name=".view.activity.tests.H5GameActivity"/>
-        <activity android:name=".view.activity.tests.H5GameForCrosswalkActivity"/>
+        <activity android:name=".view.activity.crosswalk.CrossWebviewActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            />
+        <activity android:name=".view.activity.system.SysWebviewActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            />
+        <activity android:name=".view.activity.tbs.TbsWebviewActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            />
+        <activity android:name=".view.activity.tests.JsAndNativeActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            />
+        <activity android:name=".view.activity.tests.AWSTestActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            />
+        <activity android:name=".view.activity.tests.H5GameActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            />
+        <activity android:name=".view.activity.tests.H5GameForCrosswalkActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            />
+        <activity android:name=".view.activity.tests.H5GameX5WbActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            />
     </application>
 
 </manifest>

@@ -122,6 +122,7 @@ public class SystemService {
     class MyWebViewClient extends WebViewClient {
 
         /**
+         * 显示读渠道的内容
          * 由于每次超链接在加载前都会先走shouldOverrideUrlLoading回调，所以我们如果想拦截某个URL，
          * 将其转换成其它URL可以在这里做。
          * @param view
@@ -132,7 +133,6 @@ public class SystemService {
          * WebViewClient默认就是return false的。
          */
         @Override
-        // 显示读渠道的内容
         public boolean shouldOverrideUrlLoading(WebView view, String url) {
             view.loadUrl(url);
             return true;

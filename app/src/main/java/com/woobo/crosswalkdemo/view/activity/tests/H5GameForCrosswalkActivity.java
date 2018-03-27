@@ -7,6 +7,7 @@ import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.ViewGroup;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
@@ -16,6 +17,7 @@ import android.widget.LinearLayout;
 
 import com.woobo.crosswalkdemo.R;
 import com.woobo.crosswalkdemo.common.app.MyApplication;
+import com.woobo.crosswalkdemo.common.config.H5GameUrlConfig;
 import com.woobo.crosswalkdemo.view.activity.common.CommonHeadActivity;
 import com.woobo.crosswalkdemo.view.activity.common.CommonHeadCrosswalkActivity;
 
@@ -102,7 +104,7 @@ public class H5GameForCrosswalkActivity extends CommonHeadCrosswalkActivity {
         mWebView.setUIClient(new XWalkUIClient(mWebView));
 
 
-        mWebView.loadUrl("file:///android_asset/html5-fruit-ninja/index.html");
+        mWebView.loadUrl(H5GameUrlConfig.FRUIT_LOCAL);
     }
 
     /**
@@ -149,4 +151,5 @@ public class H5GameForCrosswalkActivity extends CommonHeadCrosswalkActivity {
         // TODO: 2018/3/27 mode
         if (null != mWebView) mWebView.reload(0);
     }
+
 }

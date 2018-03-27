@@ -31,4 +31,5 @@ public class H5GameUrlConfig {
      */
     public static String H5_GAME = MALIYA;
 
+    public static String FRUIT_LOCAL = "file:///android_asset/html5-fruit-ninja/index.html";
 }

@@ -6,6 +6,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.JavascriptInterface;
@@ -269,5 +270,15 @@ public class JsAndNativeActivity extends CommonHeadActivity {
 
     private void jsToAnndroidByPrompt(String arg1, String arg2) {
         LogUtils.d(TAG, "jsToAnndroidByPrompt arg1: " + arg1 + " arg2: " + arg2);
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        // 判断点击back后能否执行后退操作
+        if (keyCode == KeyEvent.KEYCODE_BACK && null != mWebView && mWebView.canGoBack()) {
+            mWebView.goBack();
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
     }
 }

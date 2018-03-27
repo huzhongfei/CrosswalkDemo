@@ -16,6 +16,7 @@ import com.woobo.crosswalkdemo.common.app.MyApplication;
 import com.woobo.crosswalkdemo.view.activity.tests.AWSTestActivity;
 import com.woobo.crosswalkdemo.view.activity.tests.H5GameActivity;
 import com.woobo.crosswalkdemo.view.activity.tests.H5GameForCrosswalkActivity;
+import com.woobo.crosswalkdemo.view.activity.tests.H5GameX5WbActivity;
 import com.woobo.crosswalkdemo.view.activity.tests.JsAndNativeActivity;
 import com.woobo.crosswalkdemo.view.adapter.TestSelectAdapter;
 
@@ -24,7 +25,7 @@ import com.woobo.crosswalkdemo.view.adapter.TestSelectAdapter;
  */
 public class TestSelectPop extends PopupWindow implements TestSelectAdapter.OnItemClickListener {
 
-    private static final String[] testItems = {"JS And Native", "AWS TEST", "H5GAME Fruits", "H5GAME Fruits FOR CROSSW"};
+    private static final String[] testItems = {"JS And Native", "AWS TEST", "H5GAME Fruits", "H5GAME Fruits FOR CROSSW", "H5GAME Fruits FOR X5"};
     private final View view;
     private RecyclerView recyclerview;
     private TestSelectAdapter testSelectAdapter;
@@ -104,6 +105,9 @@ public class TestSelectPop extends PopupWindow implements TestSelectAdapter.OnIt
                 break;
             case 3:
                 H5GameForCrosswalkActivity.start(AppManager.getInstance().currentActivity());
+                break;
+            case 4:
+                H5GameX5WbActivity.start(AppManager.getInstance().currentActivity());
                 break;
         }
     }
