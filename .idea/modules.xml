@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/CrosswalkDemo.iml" filepath="$PROJECT_DIR$/CrosswalkDemo.iml" />
+      <module fileurl="file://E:\codes\android\CrosswalkDemo\CrosswalkDemo.iml" filepath="E:\codes\android\CrosswalkDemo\CrosswalkDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://E:\codes\android\CrosswalkDemo\app\app.iml" filepath="E:\codes\android\CrosswalkDemo\app\app.iml" />
     </modules>
   </component>
 </project>
